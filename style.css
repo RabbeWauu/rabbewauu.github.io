@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+:root{
+    --neon: rgb(64, 64, 65);
+    --clip: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(0, 0, 0);
+    color: var(--neon);
+    font-family: 'Concert One', cursive;
+    height: 100%;
+    margin: 0;
+}
+
+.head1 h1{
+    padding-left: 1rem;
+    color: gold;
+}
+
+#container{
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.head2{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+}
+.head2 h2{
+    padding-right: 0.5rem;
+    color: gold;
+}
+
+header{
+display: flex;
+padding: 2em 0;
+justify-content: center;
+}
+
+header h2{
+    margin-left: 0.5em;
+}
+
+.head2 p{
+    color: white;
+}
+
+a{
+    color: gold;
+}
+
+.wip{
+    color: rgb(145, 127, 30);
+}
+
+.avatar{
+    width: 150px;
+    height: 150px;
+}
+.avatar img{
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    clip-path: var(--clip);
+}
+.avatar::before{
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: gold;
+    clip-path: var(--clip);
+    scale: 1.1;
+    animation: glow 2.5s infinite;
+}
+@keyframes glow{
+    0%, 100% {opacity: 1;}
+    50%{opacity: 0.25;}
+}
+main{
+    display: flex;
+    flex-basis: 400px;
+    border: solid thin var(--neon);
+    background-color: #111;
+}
+nav{
+    flex: 1;
+}
+nav h2{
+    margin: 0;
+    padding: 0.5em;
+    color: rgb(185, 185, 185);
+    background-color: var(--neon);
+}
+nav ul{
+    list-style-type: none;
+    overflow-y: auto;
+    line-height: 1.5em;
+    max-height: 50vh;
+    margin-right: 2em;
+}
+nav ul li a{
+    padding: 1em 2em;
+    text-decoration: none;
+    border: solid thin var(--neon);
+    display: block;
+}
+nav ul li a:hover{
+    background-color: var(--neon);
+    color: gold;
+    background: rgb(13,36,0);
+    background: linear-gradient(-90deg, #111 0%, rgb(49, 49, 49)50%);
+}
+
+nav ul::-webkit-scrollbar{
+    width: 10px;
+    height: 10px;
+}
+nav ul::-webkit-scrollbar-track{
+    background-color: #111;
+}
+nav ul::-webkit-scrollbar-thumb{
+    background-color: var(--neon);
+}
