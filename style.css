@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@font-face {
+    font-family: 'League Spartan Variable';
+    src: url('LeagueSpartan-VF.woff2') format('woff2-variations');
+    font-weight: 200 900;
+}
+
 :root{
     --maincolor: rgb(64, 64, 65);
     --clip: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
@@ -9,7 +14,7 @@
 body{
     background-color: rgb(0, 0, 0);
     color: var(--maincolor);
-    font-family: 'Concert One', cursive;
+    font-family: 'League Spartan Variable';
     height: 100%;
     margin: 0;
 }
